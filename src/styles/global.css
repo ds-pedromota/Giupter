@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::selection {
+    background: rgba(212, 175, 55, 0.3);
+    color: #F0EDE8;
+  }
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: #0B0C10; }
+  ::-webkit-scrollbar-thumb { background: #1B2A4E; }
+  [data-reveal] { opacity: 0; }
+}
+
+@layer utilities {
+  .underline-gold {
+    @apply relative;
+  }
+  .underline-gold::after {
+    content: '';
+    @apply absolute left-0 -bottom-1 h-px w-0 bg-gold transition-all duration-300;
+  }
+  .underline-gold:hover::after { width: 100%; }
+}

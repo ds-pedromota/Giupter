@@ -1,0 +1,39 @@
+---
+interface Props { title?: string; }
+const { title = 'GIUPTER — Sistema de Identidade de Marca' } = Astro.props;
+import '../styles/global.css';
+---
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>{title}</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Newsreader:ital,wght@0,300;0,400;0,600;1,300;1,600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" is:inline></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" is:inline></script>
+</head>
+<body class="bg-bg text-off-wh font-body overflow-x-hidden">
+  <!-- Grain Overlay -->
+  <div class="pointer-events-none fixed inset-0 z-50 opacity-[0.025] bg-noise bg-repeat" aria-hidden="true"></div>
+
+  <!-- Scan Line Effect -->
+  <div class="pointer-events-none fixed inset-0 z-40 overflow-hidden" aria-hidden="true">
+    <div class="w-full h-px bg-gradient-to-r from-transparent via-cyan/30 to-transparent animate-scan-line"></div>
+  </div>
+
+  <slot />
+
+  <script>
+    import '../scripts/lenis-init';
+    import '../scripts/gsap-init';
+  </script>
+</body>
+</html>

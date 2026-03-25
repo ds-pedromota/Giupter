@@ -1,0 +1,26 @@
+---
+---
+<header class="fixed top-0 inset-x-0 z-50 bg-bg/80 backdrop-blur-md border-b border-off-wh/07">
+  <div class="max-w-screen-xl mx-auto px-6 lg:px-16 h-14 flex items-center justify-between">
+    <a href="#hero" class="font-sans font-bold text-sm tracking-[0.15em] text-off-wh uppercase">
+      GIUPTER
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      {[
+        { id: 'evolution', label: 'Evolução' },
+        { id: 'associations', label: 'Associações' },
+        { id: 'colors', label: 'Cores' },
+        { id: 'modules', label: 'Módulos' }
+      ].map((item) => (
+        <a href={`#${item.id}`}
+           class="font-mono text-xs tracking-[0.2em] text-off-wh/40 uppercase hover:text-gold transition-colors duration-200 relative group">
+          {item.label}
+          <span class="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300"></span>
+        </a>
+      ))}
+    </nav>
+    <button class="px-5 py-2 border border-cyan/40 text-cyan font-mono text-xs tracking-[0.2em] uppercase hover:bg-cyan hover:text-bg transition-all duration-300">
+      Contatar Arquiteto
+    </button>
+  </div>
+</header>

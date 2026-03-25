@@ -1,0 +1,57 @@
+---
+---
+<section id="origin" class="relative py-section overflow-hidden">
+  <img src="/giupter-formas.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-100 pointer-events-none" />
+  <div class="absolute inset-0 bg-gradient-to-b from-bg via-transparent to-bg pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-screen-xl mx-auto px-6 lg:px-16">
+    <p class="font-mono text-2xs tracking-[0.3em] text-cyan/60 uppercase mb-4" data-reveal>
+      01 / Origem
+    </p>
+    <h2 class="font-headline text-display-xl mb-6 max-w-[10ch]" data-reveal>
+      Giuliana<span class="text-gold">.</span>
+    </h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12">
+      <div data-reveal>
+        <p class="font-body text-off-wh/65 text-lg leading-relaxed mb-6">
+          Enraizada na rica herança linguística da Itália, Giuliana serve como
+          o receptáculo feminino para a linhagem Joviana. Ela representa a manifestação
+          terrena da autoridade celestial.
+        </p>
+        <p class="font-mono text-xs tracking-[0.25em] text-gold uppercase">
+          Tradução Direta: "Jovem &amp; Jovial"
+        </p>
+      </div>
+
+      <div class="flex items-start gap-8" data-reveal data-reveal-delay="150">
+        <div class="flex-shrink-0 w-24 h-24 border border-off-wh/10 rounded-sm flex items-center justify-center">
+          <span class="text-5xl text-gold/40 font-display select-none" aria-hidden="true">♃</span>
+        </div>
+        <div>
+          <p class="font-mono text-2xs tracking-widest text-off-wh/25 uppercase mb-2">Raiz da Herança</p>
+          <p class="font-headline italic text-2xl text-off-wh/80">"Filha de Jove"</p>
+          <p class="font-body text-sm text-off-wh/40 mt-2">
+            Latim <strong class="text-off-wh/60 font-medium">Iovilus</strong> — de ou pertencente a Júpiter
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-16">
+      {[
+        { label: 'A Raiz',   value: 'Jovial',   hex: '#D4AF37' },
+        { label: 'O Pai', value: 'Pater',    hex: '#D4AF37' },
+        { label: 'A Escala',  value: 'Jupiter',  hex: '#00F5FF' },
+        { label: 'A Forma',   value: 'Giuliana', hex: '#F0EDE8' },
+      ].map((item, i) => (
+        <div class="border border-off-wh/07 bg-card p-5 group hover:border-gold/30 transition-colors duration-300" data-reveal style={`--delay:${i*80}ms`}>
+          <p class="font-mono text-2xs tracking-widest text-off-wh/25 uppercase mb-2">{item.label}</p>
+          <p class="font-headline text-2xl" style={`color:${item.hex}`}>
+            {item.value}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

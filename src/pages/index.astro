@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TopNav from '../components/TopNav.astro';
+import Hero from '../components/Hero.astro';
+import BrandOrigin from '../components/BrandOrigin.astro';
+import NameEvolution from '../components/NameEvolution.astro';
+import GrandBenefic from '../components/GrandBenefic.astro';
+import ColorSystem from '../components/ColorSystem.astro';
+import TypographySystem from '../components/TypographySystem.astro';
+import ComponentLibrary from '../components/ComponentLibrary.astro';
+import JovianModules from '../components/JovianModules.astro';
+import BrandStats from '../components/BrandStats.astro';
+import Synthesis from '../components/Synthesis.astro';
+---
+<BaseLayout>
+  <TopNav />
+  <main>
+    <Hero />
+    <BrandOrigin />
+    <NameEvolution />
+    <GrandBenefic />
+    <ColorSystem />
+    <TypographySystem />
+    <ComponentLibrary />
+    <JovianModules />
+    <BrandStats />
+    <Synthesis />
+  </main>
+  <footer class="border-t border-off-wh/07 py-8">
+    <div class="max-w-screen-xl mx-auto px-6 lg:px-16 flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="font-sans text-xs text-off-wh/20 tracking-widest uppercase">
+        © 2026 Giupter · Terraformando o Cenário Digital
+      </span>
+      <div class="flex gap-6">
+        <a href="#" class="font-mono text-2xs tracking-widest text-off-wh/20 uppercase hover:text-off-wh/50">Protocolo de Privacidade</a>
+        <a href="#" class="font-mono text-2xs tracking-widest text-off-wh/20 uppercase hover:text-off-wh/50">Arquiteto</a>
+      </div>
+    </div>
+  </footer>
+</BaseLayout>

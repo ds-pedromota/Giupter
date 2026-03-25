@@ -1,0 +1,53 @@
+---
+---
+<section id="typography" class="py-section bg-surface/30">
+  <div class="max-w-screen-xl mx-auto px-6 lg:px-16">
+    <p class="font-mono text-2xs tracking-[0.3em] text-cyan/60 uppercase mb-4" data-reveal>
+      Sistema Tipográfico
+    </p>
+    <h2 class="font-headline text-display-lg mb-16" data-reveal>Arquitetura Tipográfica</h2>
+
+    <div class="space-y-2">
+      <div class="border border-off-wh/07 p-8 lg:p-12 group hover:border-gold/20 transition-colors duration-300" data-reveal>
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-end">
+          <div>
+            <p class="font-mono text-2xs tracking-widest text-off-wh/25 uppercase mb-4">Display · Cormorant Garamond</p>
+            <p class="font-display text-[6rem] lg:text-[10rem] leading-none text-off-wh/90 tracking-tight">Aa</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border border-off-wh/07 p-8 lg:p-12 group hover:border-gold/20 transition-colors duration-300" data-reveal data-reveal-delay="100">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-end">
+          <div>
+            <p class="font-mono text-2xs tracking-widest text-off-wh/25 uppercase mb-4">Título · Newsreader</p>
+            <p class="font-headline text-7xl lg:text-9xl leading-none text-off-wh/90">Aa</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border border-off-wh/07 p-8 lg:p-12 group hover:border-cyan/20 transition-colors duration-300" data-reveal data-reveal-delay="200">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-end">
+          <div>
+            <p class="font-mono text-2xs tracking-widest text-off-wh/25 uppercase mb-4">Sem Serifa UI · Syne</p>
+            <p class="font-sans text-7xl lg:text-9xl leading-none text-off-wh/90 font-bold">Aa</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border border-off-wh/07 p-8" data-reveal data-reveal-delay="400">
+      <div class="space-y-6">
+        {[
+          { label: 'Display 2XL', size: 'text-[clamp(3rem,8vw,7rem)]', cls: 'font-headline', sample: 'Giupter' },
+          { label: 'Título 1',   size: 'text-4xl', cls: 'font-headline', sample: 'Arquitetura Celestial' },
+        ].map(({ label, size, cls, sample }) => (
+          <div class="grid grid-cols-[120px_1fr] gap-4 items-baseline border-b border-off-wh/05 pb-4">
+            <span class="font-mono text-2xs text-off-wh/25 uppercase tracking-widest">{label}</span>
+            <span class={`${size} ${cls} text-off-wh/80`}>{sample}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

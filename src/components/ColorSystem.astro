@@ -1,0 +1,83 @@
+---
+---
+<section id="colors" class="py-section">
+  <div class="max-w-screen-xl mx-auto px-6 lg:px-16">
+    <p class="font-mono text-2xs tracking-[0.3em] text-cyan/60 uppercase mb-4" data-reveal>
+      Seção 04 — Linguagem Visual · Sistema de Cores
+    </p>
+    <h2 class="font-headline text-display-lg mb-2" data-reveal>
+      Atmosfera e Paleta
+    </h2>
+    <p class="font-body text-off-wh/40 mb-16 max-w-[50ch]" data-reveal data-reveal-delay="100">
+      Quatro cores fundamentais definem o universo visual do Giupter. Cada cor carrega um significado planetário e psicológico preciso.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="group cursor-default" data-reveal>
+        <div class="h-40 rounded-sm mb-3 relative overflow-hidden bg-primary transition-all duration-500 group-hover:h-56">
+          <div class="absolute bottom-0 inset-x-0 flex h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {['#0D1525','#152038','#1B2A4E','#243762','#2E4578'].map(c => (
+              <div class="flex-1 h-full" style={`background:${c}`}></div>
+            ))}
+          </div>
+        </div>
+        <p class="font-sans font-semibold text-sm text-off-wh">Primária</p>
+        <p class="font-mono text-xs text-off-wh/40 mt-0.5">#1B2A4E</p>
+        <p class="font-body text-xs text-off-wh/25 mt-1">Azul Espaço Profundo</p>
+      </div>
+
+      <div class="group cursor-default" data-reveal data-reveal-delay="80">
+        <div class="h-40 rounded-sm mb-3 relative overflow-hidden bg-gold transition-all duration-500 group-hover:h-56">
+          <div class="absolute bottom-0 inset-x-0 flex h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {['#6B4D00','#9A7200','#C49B0A','#D4AF37','#E8CC6A'].map(c => (
+              <div class="flex-1 h-full" style={`background:${c}`}></div>
+            ))}
+          </div>
+        </div>
+        <p class="font-sans font-semibold text-sm text-off-wh">Secundária</p>
+        <p class="font-mono text-xs text-off-wh/40 mt-0.5">#D4AF37</p>
+        <p class="font-body text-xs text-off-wh/25 mt-1">Ouro Joviano</p>
+      </div>
+
+      <div class="group cursor-default" data-reveal data-reveal-delay="160">
+        <div class="h-40 rounded-sm mb-3 relative overflow-hidden bg-cyan transition-all duration-500 group-hover:h-56">
+          <div class="absolute bottom-0 inset-x-0 flex h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {['#003E42','#006B72','#009DA6','#00D4E0','#00F5FF'].map(c => (
+              <div class="flex-1 h-full" style={`background:${c}`}></div>
+            ))}
+          </div>
+        </div>
+        <p class="font-sans font-semibold text-sm text-off-wh">Terciária</p>
+        <p class="font-mono text-xs text-off-wh/40 mt-0.5">#00F5FF</p>
+        <p class="font-body text-xs text-off-wh/25 mt-1">Ciano Celestial</p>
+      </div>
+
+      <div class="group cursor-default" data-reveal data-reveal-delay="240">
+        <div class="h-40 rounded-sm mb-3 relative overflow-hidden border border-off-wh/10 bg-bg transition-all duration-500 group-hover:h-56">
+          <div class="absolute bottom-0 inset-x-0 flex h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {['#000000','#050608','#0B0C10','#131620','#1E222E'].map(c => (
+              <div class="flex-1 h-full" style={`background:${c}`}></div>
+            ))}
+          </div>
+        </div>
+        <p class="font-sans font-semibold text-sm text-off-wh">Neutra</p>
+        <p class="font-mono text-xs text-off-wh/40 mt-0.5">#0B0C10</p>
+        <p class="font-body text-xs text-off-wh/25 mt-1">Preto Vazio</p>
+      </div>
+    </div>
+
+    <div class="mt-16 border border-off-wh/07" data-reveal data-reveal-delay="300">
+      {[
+        ['--c-primary',  '#1B2A4E','Fundos de cards, CTA primário'],
+        ['--c-gold',     '#D4AF37','Destaques, itálicos, ícones'],
+        ['--c-cyan',     '#00F5FF','Botões de ação, links ativos'],
+      ].map(([token, hex, uso1]) => (
+        <div class="grid grid-cols-3 border-b border-off-wh/05 hover:bg-off-wh/02 transition-colors duration-200">
+          <div class="px-5 py-4 font-mono text-xs text-cyan/70">{token}</div>
+          <div class="px-5 py-4 flex items-center gap-2"><div class="w-4 h-4 rounded-sm" style={`background:${hex}`}></div><span class="font-mono text-xs text-off-wh/60">{hex}</span></div>
+          <div class="px-5 py-4 font-body text-xs text-off-wh/50">{uso1}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+---
+<section id="stats" class="py-section-sm border-y border-off-wh/07">
+  <div class="max-w-screen-xl mx-auto px-6 lg:px-16">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-0 divide-x divide-off-wh/07">
+      {[
+        { value: '322', unit: '%',       label: 'Velocidade de Mercado',  color: 'text-gold' },
+        { value: '99.9',unit: '%',       label: 'Integridade do Escudo', color: 'text-off-wh' },
+        { value: '14',  unit: ' Sistemas',label: 'Extensão da Rede',     color: 'text-cyan' },
+        { value: '2.4', unit: ' PB',     label: 'Capacidade Neural',  color: 'text-off-wh' },
+      ].map(({ value, unit, label, color }, i) => (
+        <div class="px-8 py-10 text-center" data-reveal style={`--delay:${i*80}ms`}>
+          <p class="font-mono text-2xs tracking-widest text-off-wh/25 uppercase mb-2">{label}</p>
+          <p class={`font-headline text-5xl lg:text-6xl ${color} tabular-nums`} data-count={value}>
+            0
+          </p>
+          <span class="text-2xl text-off-wh/40">{unit}</span>
+          <div class={`w-8 h-px mx-auto mt-4 ${color === 'text-gold' ? 'bg-gold/60' : color === 'text-cyan' ? 'bg-cyan/60' : 'bg-off-wh/20'}`}></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
