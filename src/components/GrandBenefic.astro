@@ -1,15 +1,7 @@
 ---
 ---
 <section id="associations" class="relative py-section border-t border-off-wh/07 bg-bg overflow-hidden">
-  <video 
-    src="/giupiter-all.mp4" 
-    autoplay 
-    loop 
-    muted 
-    playsinline
-    class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-screen"
-    id="jupiter-video"
-  ></video>
+  <img src="/giupiter-all.gif" alt="Animação do planeta Júpiter" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-screen" />
   <div class="absolute inset-0 bg-bg/40"></div>
 
   <div class="relative max-w-screen-xl mx-auto px-6 lg:px-16 text-center">
@@ -24,10 +16,3 @@
       </p>
   </div>
 </section>
-
-<script>
-  const video = document.getElementById('jupiter-video') as HTMLVideoElement;
-  if (video) {
-    video.playbackRate = 0.3; // Ajuste este valor (0.5 = metade da velocidade normal, 0.2 = bem devagar)
-  }
-</script>
