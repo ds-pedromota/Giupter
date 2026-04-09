@@ -21,3 +21,39 @@
     </div>
   </div>
 </section>
+
+<script>
+  const stats = document.querySelectorAll('[data-count]');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = entry.target;
+        const endValue = parseFloat(target.getAttribute('data-count') || '0');
+        const isFloat = (target.getAttribute('data-count') || '').includes('.');
+        const duration = 2000; // Duração da animação em milissegundos (2s)
+        let startTimestamp: number | null = null;
+
+        const step = (timestamp: number) => {
+          if (!startTimestamp) startTimestamp = timestamp;
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          const easeOut = 1 - Math.pow(1 - progress, 4); // Desacelera no final
+          const currentVal = easeOut * endValue;
+          
+          target.textContent = isFloat ? currentVal.toFixed(1) : Math.floor(currentVal).toString();
+
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            target.textContent = endValue.toString();
+          }
+        };
+
+        window.requestAnimationFrame(step);
+        observer.unobserve(target); // Garante que anime apenas na primeira vez que aparecer
+      }
+    });
+  }, { threshold: 0.5 });
+
+  stats.forEach(stat => observer.observe(stat));
+</script>
